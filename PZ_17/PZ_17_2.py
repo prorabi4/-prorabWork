@@ -30,12 +30,10 @@ def calculate_day():
 root = tk.Tk()
 root.title("День недели по номеру дня в году")
 
-# Надпись и поле ввода
 tk.Label(root, text="Введите число K (от 1 до 365):").pack(pady=10)
 entry = tk.Entry(root)
 entry.pack(pady=5)
 
-# Кнопка вычисления
 button = tk.Button(root, text="Вычислить день недели", command=calculate_day)
 button.pack(pady=10)
 
