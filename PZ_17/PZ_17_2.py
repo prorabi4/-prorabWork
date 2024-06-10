@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import messagebox
+
 
 def calculate_day():
     try:
@@ -25,7 +25,8 @@ def calculate_day():
     except ValueError:
         result = "Введите верное целое число"
 
-    messagebox.showinfo("Результат", result)
+    result_label.config(text=result)
+
 
 root = tk.Tk()
 root.title("День недели по номеру дня в году")
@@ -36,5 +37,8 @@ entry.pack(pady=5)
 
 button = tk.Button(root, text="Вычислить день недели", command=calculate_day)
 button.pack(pady=10)
+
+result_label = tk.Label(root, text="")
+result_label.pack(pady=20)
 
 root.mainloop()
